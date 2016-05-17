@@ -1,0 +1,96 @@
+@media (min-width: 801px) {
+	
+	div.col-md-4.col-sm-offset-1.col-sm-10.box-border, 
+	div.col-md-3.col-sm-offset-1.col-sm-10.box-border {
+		margin-left: 0 !important;
+	}
+
+	div.arrow img {
+		max-width: 100%;
+	}
+
+	img.hero-image {
+		max-width: 100%;
+	}
+
+}
+
+/* =============== =============== Tablet portrait down =============== =============== */
+@media (max-width: 800px)  {
+	/* =============== Hero */
+	
+	img.hero-image {
+		margin: 0 0 40px;
+		width: 100%;
+		max-width: 500px;
+	}
+	
+	/* =============== Arrows */
+	.arrow.top div.arrow-top-padding {
+		height: 250px;	
+	}
+	
+	.arrow.down {
+		margin: 30px 0;
+	}
+	
+	/* =============== Signup Form */
+	.row-fluid .xlarge {
+		width: 60%;
+	}
+
+	.social {
+		text-align: center;
+	}
+
+	/* =============== Box Shadows */
+	
+	div.signup, div.social, div.company-info {
+		-webkit-box-shadow: 0px 10px 10px rgba(50, 50, 50, 0.25);
+		-moz-box-shadow: 0px 10px 10px rgba(50, 50, 50, 0.25);
+		box-shadow: 0px 10px 10px rgba(50, 50, 50, 0.25);
+	}
+
+	.responsive-text-center {
+		text-align: center;
+	}
+
+	.box-border {
+		margin-bottom: 0;
+	}
+
+	div.hero-phone img {
+		width: 100%;
+		max-width: 500px;
+	}
+
+}
+
+/* =============== =============== Mobile =============== =============== */
+@media (max-width: 480px) {
+
+	/* =============== Arrows */
+	
+	.arrow.down {
+		margin-bottom: 18px;
+		display: inherit !important;
+	}
+	
+	.social {
+		text-align: center;
+	}
+	
+	.social .span4 {
+		width: 70px;
+		display: inline;
+		padding-right: 10px;
+	}
+	
+	/* =============== Box Shadows */
+	
+	div.signup, div.social, div.company-info {
+		-webkit-box-shadow: 0px 10px 5px rgba(50, 50, 50, 0.25);
+		-moz-box-shadow: 0px 10px 5px rgba(50, 50, 50, 0.25);
+		box-shadow: 0px 10px 5px rgba(50, 50, 50, 0.25);
+	}
+}

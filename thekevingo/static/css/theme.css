@@ -1,0 +1,224 @@
+/* Body, typography, element spacing, & Misc */
+
+body {
+	background: url(../img/tiny-grid.png) repeat;
+	color: #241B29;
+	font-size: 14px;
+	line-height: 18px;
+}
+
+.wrapper {
+	padding: 20px;
+}
+
+h1, h2, h3, h4, h5 {
+	font-family: 'Permanent Marker', cursive;
+	color: #241B29;
+	margin: 0;
+}
+
+h2 {
+    font-size: 24px;
+    line-height: 36px;
+}
+
+p {
+	margin: 0 0 9px;
+}
+
+hr {
+	border-color: #AAA -moz-use-text-color #FFF;
+	margin: 18px 0;
+}
+
+.box-border {
+	background-color: transparent;
+	border: 3px solid black;
+	padding: 20px;
+	margin-bottom: 30px;
+	border-radius: 5px;
+}
+
+.box-border.company-info {
+	padding: 20px 35px;
+}
+
+a {
+	text-decoration: none;
+	color: #ED1A4B;
+}
+
+a:hover {
+	color: #ED1A4B;
+}
+
+label, input, button, select, textarea {
+	font-size: 13px;
+}
+
+.input-append, .input-prepend {
+	margin-bottom: 0;
+}
+
+blockquote p {
+	font-size: 16px;
+    font-weight: 300;
+    line-height: 22.5px;
+    margin-bottom: 0;
+}
+
+.lead {
+	font-size: 20px;
+    font-weight: 200;
+    line-height: 27px;
+    margin-bottom: 18px;
+}
+
+form {
+    margin: 0 0 18px;
+}
+
+.control-group {
+    margin-bottom: 9px;
+}
+
+label, input, button, select, textarea {
+	line-height: 18px;
+}
+
+/* Highlighting */
+
+::-moz-selection {
+	background: transparent;
+}
+
+::selection {
+	background: transparent;
+}
+
+p::-moz-selection,a::-moz-selection, h1::-moz-selection, h2::-moz-selection, h3::-moz-selection, h4::-moz-selection, h5::-moz-selection, blockquote::-moz-selection, small::-moz-selection, label::-moz-selection {
+	background: #ED1A4B;
+	color: #fff;
+}
+
+p::selection, h1::selection, h2::selection, h3::selection, h4::selection, h5::selection, blockquote::selection, small::selection, label::selection {
+	background: #ED1A4B;
+	color: #fff;
+}
+
+/* Signup Form */
+
+div.top-padding {
+	height: 20px;
+}
+
+div.signup {
+	text-align: right;
+	-webkit-box-shadow: 7px -7px 10px rgba(50, 50, 50, 0.25);
+	-moz-box-shadow: 7px -7px 10px rgba(50, 50, 50, 0.25);
+	box-shadow: 7px -7px 10px rgba(50, 50, 50, 0.25);
+}
+
+a.magenta.btn {
+	background-color: #ED166A;
+	border-color: #CF002D;
+	color: #FFFFFF;
+	text-shadow: 0 -1px 0 #CF002D;
+}
+
+a.magenta.btn:hover, a.magenta.btn:active, a.magenta.btn.active, a.magenta.btn.disabled, a.magenta.btn[disabled] {
+	background-color: #d9115f;
+}
+
+a.magenta.btn.active, a.magenta.btn:active {
+	background-image: none;
+	color: #ff7eaf;
+}
+
+a.magenta.btn:hover {
+	background-color: #d9115f;
+}
+
+.input-prepend .add-on, .input-append .add-on, .input-prepend .btn, .input-append .btn {
+	margin-left: -4px;
+}
+
+/* Arrows */
+
+div.arrow {
+	text-align: center;
+}
+
+.arrow.top div.arrow-top-padding {
+	height: 125px;
+}
+
+/* Hero Title */
+
+div.hero-title {
+	font-size: 60px;
+	text-align: center;
+}
+
+/* Social Media */
+
+div.social {
+	text-align: center;
+	-webkit-box-shadow: -7px 7px 10px rgba(50, 50, 50, 0.25);
+	-moz-box-shadow: -7px 7px 10px rgba(50, 50, 50, 0.25);
+	box-shadow: -7px 7px 10px rgba(50, 50, 50, 0.25);
+}
+
+/* Social Media */
+
+.social-icon i {
+	overflow: hidden;
+	height: 48px;
+	width: 48px;
+	display: inline-block;
+	margin-bottom: 10px;
+}
+
+.social-icon i:hover {
+	background-position: 0 48px;
+}
+
+a.googleplus i {
+	background-image: url(../img/social-googleplus.png);
+}
+
+a.facebook i {
+	background-image: url(../img/social-facebook.png);
+}
+
+a.linkedin i {
+	background-image: url(../img/social-linkedin.png);
+}
+
+a.twitter i {
+	background-image: url(../img/social-twitter.png);
+}
+
+a.skype i {
+	background-image: url(../img/social-skype.png);
+}
+
+a.pinterest i {
+	background-image: url(../img/social-pinterest.png);
+}
+
+/* Company Info */
+
+div.company-info {
+	-webkit-box-shadow: 7px 7px 10px rgba(50, 50, 50, 0.25);
+	-moz-box-shadow: 7px 7px 10px rgba(50, 50, 50, 0.25);
+	box-shadow: 7px 7px 10px rgba(50, 50, 50, 0.25);
+}
+
+blockquote.pull-right {
+	border-right-color: #AAA;
+}
+
+.sqrt {
+	padding-top: 20px;
+}

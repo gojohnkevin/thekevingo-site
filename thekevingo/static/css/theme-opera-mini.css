@@ -1,0 +1,5 @@
+.box-border {
+	background-color: transparent;
+	border: 3px solid black !important;
+	-o-border-image: none !important;
+}
