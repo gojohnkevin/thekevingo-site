@@ -1,3 +1,3 @@
 # thekevingo-site
 
-<a href="thekevingo.com">thekevingo.com</a>
+<a href="http://thekevingo.com">thekevingo.com</a>
