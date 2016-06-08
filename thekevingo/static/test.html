@@ -9,7 +9,7 @@
     <link type="text/css" rel="stylesheet" href="/static/css/bootstrap.min.css" charset="utf-8">
     <link type="text/css" rel="stylesheet" href="{% static 'portal/default.css' %}" charset="utf-8">
 </head>
-<body data-punchparams="SIP=192.168.19.62&SIGN=bRr%2BaxAPejR8iFYukbi%2FMQ%3D%3D&PORT=2000&NONCE=dMLXhumXfeqKOSbw&MA=A0999B049477&TS=1465381158&SIGNED=MA%2CPORT%2CRN%2CSIP%2CUI&UIP=10.65.3.19&UI=00a620&RN=2000&OS=http%3A%2F%2Fwww.gstatic.com%2Fgenerate_204" data-step="plan_select" data-csrftoken="SaLugxdkx3xHuTEOT5bBvP8z82Wql11u" data-configurl="/static/portal/default.json">
+<body data-step="plan_select" data-configurl="/static/portal/default.json">
 
     <div id="page-container">
 
@@ -80,7 +80,7 @@
         <div id="connect_block" style="display:none;">
           <div class="checkbox">
             <label>
-              <input type="checkbox" name="marketing_subscription">{% trans "Subscribe to spam" %}
+              <input type="checkbox" name="marketing_subscription">Subscribe to spam
             </label>
           </div>
 
@@ -100,13 +100,13 @@
     </form>
     {{#if ask_credentials}}
     <div>
-      <a class="signin" href="#">{% trans "Sign in" %}</a>
+      <a class="signin" href="#">Sign in</a>
     </div>
     {{/if}}
 
     {{#if guest}}
     <div>
-      <a class="cancel" href="#">{% trans "Logout" %}</a>
+      <a class="cancel" href="#">Logout</a>
     </div>
     {{/if}}
 </script>
@@ -166,7 +166,7 @@
 
 <script id="waiting-template" type="text/x-handlebars-template">
     <div class="center">
-        <div>{% trans "Waiting" %}...</div>
+        <div>Waiting...</div>
         <div><img src="{% static "portal/loading-animated-circle-32x32.gif" %}" border="0" /></div>
     </div>
 </script>
@@ -176,16 +176,16 @@
         <div>
           <form class="credentials-form">
             <div>
-              <input name="login" class="form-control" type="text" placeholder="{% trans "Login" %}">
+              <input name="login" class="form-control" type="text" placeholder="Login">
               <div class="input-error"></div>
             </div>
             <div>
-              <input name="password" class="form-control" type="password" placeholder="{% trans "Password" %}">
+              <input name="password" class="form-control" type="password" placeholder="Password">
               <div class="input-error"></div>
             </div>
-            <button data-loading-text="{% trans "Confirming" %}..." class="btn btn-sm btn-primary btn-loader">{% trans "Confirm" %}</button>
+            <button data-loading-text="Confirming..." class="btn btn-sm btn-primary btn-loader">Confirm</button>
             <div>
-              <a class="cancel" href="#">{% trans "Cancel" %}</a>
+              <a class="cancel" href="#">Cancel</a>
             </div>
           </form>
         </div>
@@ -198,9 +198,9 @@
 <script type="text/javascript" src="/static/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="/static/js/handlebars.min.js"></script>
 
-<script type="text/javascript" src="http://10.65.3.155/static/dist/snowflake.min.js"></script>
+<script type="text/javascript" src="http://localhost:8000/static/dist/snowflake.min.js"></script>
 
 
-<script type="text/javascript" src="http://localhost:8000/static/CACHE/js/fbb72f370015.js"></script>
+<script type="text/javascript" src="http://10.65.3.155/static/portal/javascripts/default.js"></script>
 
 </html>
