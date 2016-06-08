@@ -1,0 +1,75 @@
+{
+  "languages": {
+    "en" : "English",
+    "ru" : "РУССКИЙ",
+    "fr" : "FRANÇAIS",
+    "pt" : "PORTUGUÊS",
+    "tr" : "TÜRK",
+    "de" : "DEUTSCH",
+    "ko" : "한국어‬",
+    "it" : "ITALIANO",
+    "zh-cn" : "简体中文‬",
+    "ar" : "‫العربية‬",
+    "zh-tw" : "繁體中文‬",
+    "ja" : "日本語‬",
+    "es" : "ESPAÑOL",
+    "pl" : "Polski"
+  },
+  "translations": {
+    "en" : {
+      "plan_select": {
+        "intro": "Howdy partner, seems like you wanna get connected",
+        "plan_label": "Please select a WiFi plan"
+      },
+      "general_error": {
+        "title": "Ooooops! Something went wrong...",
+        "body": "Please try reconnecting to the network"
+      },
+      "connected": {
+        "success": "You are now connected to the Internet!",
+        "now_proceed": "Keep calm and carry on to your intended destination"
+      },
+      "already_connected": {
+        "success": "You are already connected to the Internet!",
+        "now_proceed": "Have a great browsing experience with amazing bandwidth"
+      }
+    },
+    "fr" : {
+      "plan_select": {
+        "intro": "Bonjour partenaire semble que vous voulez vous connectez",
+        "plan_label": "S'il vous plaît sélectionner un plan de WiFi"
+      },
+      "general_error": {
+        "title": "Oops! Quelque chose a mal tourné ...",
+        "body": "S'il vous plaît essayer de se reconnecter au réseau"
+      },
+      "connected": {
+        "success": "Vous êtes maintenant connecté",
+        "now_proceed": "Keep calm and carry on to your intended destination"
+      },
+      "already_connected": {
+        "success": "You are already connected to the Internet!",
+        "now_proceed": "Have a great browsing experience with amazing bandwidth"
+      }
+    },
+    "pl" : {
+      "plan_select": {
+        "intro": "Cześć, podłączyć Cię do internetu?",
+        "plan_label": "Proszę wybrać plan WiFi"
+      },
+      "general_error": {
+        "title": "Ooooops! Coś poszło nie tak...",
+        "body": "Proszę spróbować połączyć się ponownie do sieci"
+      },
+      "connected": {
+        "success": "Jesteś podłączony.",
+        "now_proceed": "Keep calm and carry on to your intended destination"
+      },
+      "already_connected": {
+        "success": "You are already connected to the Internet!",
+        "now_proceed": "Have a great browsing experience with amazing bandwidth"
+      }
+    }
+
+  }
+}

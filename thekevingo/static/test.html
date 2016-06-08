@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html webdriver="true" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" dir="auto" lang="en">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="generic single-page captive portal example">
+    <meta name="keywords" content="">
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+    <meta content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" name="viewport">
+    <link type="text/css" rel="stylesheet" href="/static/css/bootstrap.min.css" charset="utf-8">
+    <link type="text/css" rel="stylesheet" href="{% static 'portal/default.css' %}" charset="utf-8">
+</head>
+<body data-punchparams="SIP=192.168.19.62&SIGN=bRr%2BaxAPejR8iFYukbi%2FMQ%3D%3D&PORT=2000&NONCE=dMLXhumXfeqKOSbw&MA=A0999B049477&TS=1465381158&SIGNED=MA%2CPORT%2CRN%2CSIP%2CUI&UIP=10.65.3.19&UI=00a620&RN=2000&OS=http%3A%2F%2Fwww.gstatic.com%2Fgenerate_204" data-step="plan_select" data-csrftoken="SaLugxdkx3xHuTEOT5bBvP8z82Wql11u" data-configurl="/static/portal/default.json">
+
+    <div id="page-container">
+
+        <div class="clearfix" id="header">
+            <div title="offering high-speed Internet access based on your needs" id="brand-logo-img"></div>
+            <div id="address">
+                <p class="address">INTERTOUCH PTE LTD</p>
+                <div role="ficap-languages">
+                </div>
+            </div>
+        </div>
+
+        <div role="ficap-content" class="content"></div>
+    </div>
+
+    <div id="footer">
+        Copyright &copy; 2016 <a href="http://www.intertouch.com">interTouch Pte Ltd</a>
+    </div>
+
+</body>
+<!-- start templates -->
+
+<script id="languages-template" type="text/x-handlebars-template">
+    <div id="language" class="dropdown">
+        <button id="languageLabel" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <span id="current-language-name">{{current_language_name}}</span>
+            <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu sublanguage" aria-labelledby="languageLabel" id="language-dropdown">
+        </ul>
+    </div>
+</script>
+
+<script id="session-template" type="text/x-handlebars-template">
+
+  <form class="session-form">
+    <div>You already have active enrollment for <span class="bold">{{enrollment.billplan.name}}</span></div>
+    {{#if enrollment.has_empty_slots}}
+      <div>
+        <input type="button" class="btn btn-default session-form-join" value="Join" />
+      </div>
+    {{#else}}
+      <div>To connect new device you need to disconnect one of existing:</div>
+       {{#each enrollment.sessions}}
+       <div>
+         <span class="bold">{{mac_address}}</span>
+         <input data:id="{{id}}" type="button" class="btn btn-default btn-xs session-form-disconnect" value="Disconnect" />
+       </div>
+       {{/each}}
+    {{/if}}
+  </form>
+
+</script>
+
+<script id="plan_select-template" type="text/x-handlebars-template">
+
+    <form id="plan_select" method="post" class="plan-form">
+        <div>{{plan_select.intro}}</div>
+        <div class="form-group">
+            <h3>{{plan_select.plan_label}}</h3>
+            {{#each bill_plans}}
+            <div>
+              <input type="radio" id="bill_plan_{{uuid}}" name="bill_plan" value="{{uuid}}" />
+              {{name}}
+            </div>
+            {{/each}}
+        </div>
+        <div id="connect_block" style="display:none;">
+          <div class="checkbox">
+            <label>
+              <input type="checkbox" name="marketing_subscription">{% trans "Subscribe to spam" %}
+            </label>
+          </div>
+
+          <div class="marketing-field">
+            <input type="email" class="form-control" name="marketing_email" placeholder="Email">
+            <div class="input-error"></div>
+          </div>
+          <div class="marketing-field">
+            <input type="phone" class="form-control" name="marketing_phone_number" placeholder="Phone">
+            <div class="input-error"></div>
+          </div>
+
+          <div class="form-group" >
+            <input type="button" class="btn btn-default" value="Connect" />
+          </div>
+        </div>
+    </form>
+    {{#if ask_credentials}}
+    <div>
+      <a class="signin" href="#">{% trans "Sign in" %}</a>
+    </div>
+    {{/if}}
+
+    {{#if guest}}
+    <div>
+      <a class="cancel" href="#">{% trans "Logout" %}</a>
+    </div>
+    {{/if}}
+</script>
+
+<script id="general_error-template" type="text/x-handlebars-template">
+    <div class="panel panel-danger">
+        <div class="panel-heading">
+            <h3 class="panel-title">{{general_error.title}}</h3>
+        </div>
+        <div class="panel-body">
+            {{general_error.body}}
+        </div>
+    </div>
+</script>
+
+<script id="connected-template" type="text/x-handlebars-template">
+    <div class="center">
+        <div class="panel panel-info">
+            <div class="panel-heading">
+                <h3 class="panel-title">{{connected.success}}</h3>
+            </div>
+            <div class="panel-body">
+                <div>
+                    {{connected.now_proceed}}
+                </div>
+                <a href="{{requested_url}}" role="ficap-autoredirect" data-delay="5">
+                    <h3>
+                        {{requested_url}}
+                    </h3>
+                </a>
+                <div class="progress" role="ficap-progress" style="display:none;">
+                    <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</script>
+
+<script id="already_connected-template" type="text/x-handlebars-template">
+    <div class="center">
+        <div class="panel panel-info">
+            <div class="panel-heading">
+                <h3 class="panel-title">{{already_connected.success}}</h3>
+            </div>
+            <div class="panel-body">
+                <div>
+                    {{already_connected.now_proceed}}
+                </div>
+                <a href="{{requested_url}}">
+                    {{requested_url}}
+                </a>
+            </div>
+        </div>
+    </div>
+</script>
+
+<script id="waiting-template" type="text/x-handlebars-template">
+    <div class="center">
+        <div>{% trans "Waiting" %}...</div>
+        <div><img src="{% static "portal/loading-animated-circle-32x32.gif" %}" border="0" /></div>
+    </div>
+</script>
+
+<script id="credentials" type="text/x-handlebars-template">
+    <div class="center">
+        <div>
+          <form class="credentials-form">
+            <div>
+              <input name="login" class="form-control" type="text" placeholder="{% trans "Login" %}">
+              <div class="input-error"></div>
+            </div>
+            <div>
+              <input name="password" class="form-control" type="password" placeholder="{% trans "Password" %}">
+              <div class="input-error"></div>
+            </div>
+            <button data-loading-text="{% trans "Confirming" %}..." class="btn btn-sm btn-primary btn-loader">{% trans "Confirm" %}</button>
+            <div>
+              <a class="cancel" href="#">{% trans "Cancel" %}</a>
+            </div>
+          </form>
+        </div>
+    </div>
+</script>
+
+<!-- end templates -->
+
+<script type="text/javascript" src="/static/js/jquery.min.js" ></script>
+<script type="text/javascript" src="/static/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/static/js/handlebars.min.js"></script>
+
+<script type="text/javascript" src="http://10.65.3.155/static/dist/snowflake.min.js"></script>
+
+
+<script type="text/javascript" src="http://localhost:8000/static/CACHE/js/fbb72f370015.js"></script>
+
+</html>
