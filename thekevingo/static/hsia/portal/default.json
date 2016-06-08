@@ -19,7 +19,7 @@
     "en" : {
       "plan_select": {
         "intro": "Howdy partner, seems like you wanna get connected",
-        "plan_label": "Please select a WiFi plan"
+        "plan_label": "Choose a plan:"
       },
       "general_error": {
         "title": "Ooooops! Something went wrong...",

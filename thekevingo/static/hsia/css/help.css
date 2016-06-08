@@ -1,0 +1,40 @@
+*,html, body{
+	font:11px Verdana, Arial, Helvetica, sans-serif;
+}
+#HelpColumn{
+	border:1px solid #c0c0c0;
+	width:558px;
+	min-height:498px;
+	height:auto !important;
+}
+
+#HeadingTitle{
+	background:url(../images/HelpBG.jpg) repeat-x 0 0;
+	height:22px;
+}
+
+#HeadingTitle h3{
+	background:url(../images/HelpTitle.jpg) no-repeat 0 0;
+	height:21px;
+	margin-left:15px;
+	text-indent:-9999px;
+}
+
+#HelpContent{
+	color:#484848;
+	padding:5px 15px;
+}
+
+#HelpContent h4{
+	font:bold 11px Verdana, Arial, Helvetica, sans-serif;
+	padding:0 0 4px  0;
+}
+
+.OptionsContent{
+	padding:5px 12px
+}
+
+.OptionsTitle span{
+	font-size:8px;
+}
+

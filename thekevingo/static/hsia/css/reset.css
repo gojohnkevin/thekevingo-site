@@ -1,0 +1,183 @@
+/*-----------------------------------------------------
+Reset CSS Files
+----------------------------------------------------- */
+*, html, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h5, h5, h6, pre, form, label, fieldset, p, blockquote,th, td, table {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+}
+
+
+
+.clearFix {
+	clear:both;
+}
+
+a {
+	border:0;
+	color:#aa0d32;
+	text-decoration:none;
+}
+
+a:hover{
+	text-decoration:underline;
+}
+
+li {
+	list-style-type:none;
+	padding:0;
+	margin:0;
+}
+a img {
+	border:0;
+	outline:none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight:normal;
+}
+
+h1 {
+	font-size:36px;
+}
+
+h2 {
+	font-size:24px;
+}
+
+h3 {
+	font-size:18px;
+	font-weight:bold;
+}
+
+h4{
+	font-size:16px;
+}
+
+h5, h6 {
+	font-size:14px;
+}
+
+p {
+	line-height: 1.1em;
+	margin-bottom: 15px;
+}
+
+.AlignLeft{
+	float:left;
+}
+
+.AlignRight{
+	float:right;
+}
+
+ul#LangNav li a{
+	height:25px;
+	width: 70px;
+}
+
+ul#LangNav li.lang_en a{
+	background-image:url(../images/language/en.png);
+}
+
+ul#LangNav li.lang_en a:hover, ul#LangNav li.lang_en_active a{
+	background-image:url(../images/language/en_over.png);
+}
+
+ul#LangNav li.lang_ar a{
+	background-image:url(../images/language/ar.png);
+}
+ul#LangNav li.lang_ar a:hover, ul#LangNav li.lang_ar_active a{
+	background-image:url(../images/language/ar_over.png);
+}
+
+ul#LangNav li.lang_de a{
+	background-image:url(../images/language/de.png);
+}
+ul#LangNav li.lang_de a:hover, ul#LangNav li.lang_de_active a{
+	background-image:url(../images/language/de_over.png);
+}
+
+ul#LangNav li.lang_fr a{
+	background-image:url(../images/language/fr.png);
+}
+ul#LangNav li.lang_fr a:hover, ul#LangNav li.lang_fr_active a{
+	background-image:url(../images/language/fr_over.png);
+}
+
+ul#LangNav li.lang_it a{
+	background-image:url(../images/language/it.png);
+}
+ul#LangNav li.lang_it a:hover, ul#LangNav li.lang_it_active a{
+	background-image:url(../images/language/it_over.png);
+}
+
+ul#LangNav li.lang_es a{
+	background-image:url(../images/language/es.png);
+}
+ul#LangNav li.lang_es a:hover, ul#LangNav li.lang_es_active a{
+	background-image:url(../images/language/es_over.png);
+}
+
+ul#LangNav li.lang_ja a{
+	background-image:url(../images/language/ja.png);
+}
+ul#LangNav li.lang_ja a:hover, ul#LangNav li.lang_ja_active a{
+	background-image:url(../images/language/ja_over.png);
+}
+
+ul#LangNav li.lang_ko a{
+	background-image:url(../images/language/ko.png);
+}
+ul#LangNav li.lang_ko a:hover, ul#LangNav li.lang_ko_active a{
+	background-image:url(../images/language/ko_over.png);
+}
+
+ul#LangNav li.lang_pt a{
+	background-image:url(../images/language/pt.png);
+}
+ul#LangNav li.lang_pt a:hover, ul#LangNav li.lang_pt_active a{
+	background-image:url(../images/language/pt_over.png);
+}
+
+ul#LangNav li.lang_ru a{
+	background-image:url(../images/language/ru.png);
+}
+ul#LangNav li.lang_ru a:hover, ul#LangNav li.lang_ru_active a{
+	background-image:url(../images/language/ru_over.png);
+}
+
+ul#LangNav li.lang_tr a{
+	background-image:url(../images/language/tr.png);
+}
+ul#LangNav li.lang_tr a:hover, ul#LangNav li.lang_tr_active a{
+	background-image:url(../images/language/tr_over.png);
+}
+
+ul#LangNav li.lang_zh-cn a{
+	background-image:url(../images/language/zh-cn.png);
+}
+ul#LangNav li.lang_zh-cn a:hover, ul#LangNav li.lang_zh-cn_active a{
+	background-image:url(../images/language/zh-cn_over.png);
+}
+
+ul#LangNav li.lang_zh-tw a{
+	background-image:url(../images/language/zh-tw.png);
+}
+ul#LangNav li.lang_zh-tw a:hover, ul#LangNav li.lang_zh-tw_active a{
+	background-image:url(../images/language/zh-tw_over.png);
+}
+ul#CreditCardLogos {
+	width: 350px;
+	list-style-type: none;
+	display: block;
+	margin: auto;
+	padding: auto;
+	clear:both;
+}
+ul#CreditCardLogos li{
+	float: left;
+	margin: 2px;
+}

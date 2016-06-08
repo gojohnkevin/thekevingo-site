@@ -1,0 +1,36 @@
+/*Custom Stylesheet Override */
+#Logo h1{
+	background:url(../images/Logo.png) no-repeat 0 0;
+	height:66px;
+	width:255px;
+    top:7px;
+}
+.rojo {
+	color: #9D102D;
+}
+.gcp_td_back {
+	background-color:#FFFFFF;
+}
+
+#UpgradeYourPlanMessage {
+	background:url(../images/img_colorplate.png) no-repeat 0 0;
+	background-size:100% 100%;
+	height: 120px;
+	width: 280px;
+	color:#FFFFFF;
+}
+#UpgradeYourPlanMessage div{
+	padding-left:7px;
+	padding-right:7px;
+	padding-top:15px;
+	line-height:150%
+}
+
+#gcp_ad_banner{width:332px;margin-left:-13px;margin-top:-20px;}
+
+#UpgradeYourPlanMessage span{
+	border: solid 2px #CCCCCC;
+	padding:2px;
+	background-color:#EEEEEE;
+	color: #484848;
+}

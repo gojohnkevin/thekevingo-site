@@ -1,0 +1,144 @@
+/*-----------------------------------------------------
+Typhographic
+----------------------------------------------------- */
+.small{
+	font-size:10px
+}
+
+.red{
+	color:#aa0d32;
+}
+
+.loading {
+	position: absolute;
+	top: 210px; left: 315px;
+}
+
+#BottomTab .loading{
+	position: absolute;
+	top: 190px; left: 315px;
+}
+
+#GuestMail .loading{
+	position: absolute;
+	top: 190px; left: 455px;
+}
+
+
+h2.Title, h3.Tag, h4.Span, .ConnectedTab h3{
+	display:block;
+	text-indent:-9999px;
+}
+
+.LandingPage h2.Title{
+	background:url(../images/WelcomeTo.png) 0 0 no-repeat;
+	height:31px;
+}
+
+#BCPage h2.Title{
+	background:url(../images/BCTitle.jpg) 0 0 no-repeat;
+}
+
+.LandingPage h3.Tag{
+	background:url(../images/EnjoyHigh.png) 0 0 no-repeat;
+	height:22px;
+	padding:0 0 20px 0;
+}
+
+
+
+.LandingPage h4.Span{
+	background:url(../images/ToBegin.png) 0 0 no-repeat;
+	height:19px;
+	padding:0 0 15px 0;
+}
+
+#BCPage h4.Span{
+	background:url(../images/BCGetConnected.png) 0 0 no-repeat;
+}
+
+.ConnectingColumn h2.Title, .AlreadyPurchaseColumn h2.Title, .AdditionalDevicesColumn h2.Title{
+	background:url(../images/ChooseYourLogin.png) 0 0 no-repeat;
+	height:34px;
+}
+
+.ConnectingColumn h3.Tag, .AlreadyPurchaseColumn h3.Tag, .AdditionalDevicesColumn h3.Tag{
+	background:url(../images/FirstTimeUser.png) 0 0 no-repeat;
+	height:16px;
+	padding:0 0 15px 0;
+}
+
+.AlreadyPurchaseColumn h2.Title{
+	background:url(../images/AlreadyPurchase.png) 0 0 no-repeat;
+}
+
+.AlreadyPurchaseColumn h3.Tag{
+	background:url(../images/ReturningUsers.png) 0 0 no-repeat;
+}
+
+.WirelessLogin h3.Tag{
+	background:url(../images/WirelessFirstTimeUser.png) 0 0 no-repeat;
+}
+
+
+
+#BottomTab h3{
+	height:15px;
+	margin:0 0 5px 0;
+}
+
+
+
+#UserDetailsContainer .Left h3{
+	background:url(../images/LoginTitle.png) 0 0 no-repeat;
+}
+
+#UserDetailsContainer .Right h3{
+	background:url(../images/PlanTitle.png) 0 0 no-repeat;
+}
+
+#UserDetailsContainer .Right #ExtendYourPlan h3{
+	background:url(../images/ExtendYourPlan.png) 0 0 no-repeat;
+}
+
+#UserDetailsContainer .Right #UpgradeYourPlan h3{
+	background:url(../images/UpgradeYourPlan.png) 0 0 no-repeat;
+}
+
+#SelectAirlines, .selectbox{
+	border:1px solid #819cb9;
+	padding:1px;
+	width:160px;
+	margin-left:10px;
+}
+
+
+h2.OptionsTitle {
+	padding: 0px;	margin: 0 0 15px 0;
+	background: url(../images/OptionBullet.png) 0 0px no-repeat;
+	font-size: 12px;
+	font-weight: bold;
+	float: left;
+	height:11px;
+	line-height:10px;
+	width: 655px;
+}
+h2.OptionsTitle a {
+	color: #181818;
+	border-bottom:1px solid #acafb3;
+	text-decoration: none;
+	display: block;
+	padding: 0 0 5px 15px;
+}
+
+h2.active, h2.active a {background-position: left bottom; color: #aa0d32; border-color:#aa0d32;}
+
+.OptionsContent {
+	margin: 0 0 5px; padding: 0;
+	overflow: hidden;
+	width: 655px;
+	clear: both;
+}
+.OptionsContent .block {
+	padding: 20px;
+}

@@ -1,0 +1,291 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>HSIA</title>
+    <link rel="stylesheet" type="text/css" href="/static/hsia/css/typo.css" />
+    <link rel="stylesheet" type="text/css" href="/static/hsia/css/template.css" />
+    <link rel="stylesheet" type="text/css" href="/static/hsia/css/forms.css" />
+    <link rel="stylesheet" type="text/css" href="/static/hsia/css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="/static/hsia/css/custom.css" />
+    <script type="text/javascript" src="/static/hsia/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/static/hsia/js/jquery.browser.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/static/hsia/js/fancybox/jquery.fancybox-1.3.4.css" media="screen" />
+    <script type="text/javascript" src="/static/hsia/js/fancybox/jquery.fancybox-1.3.4.pack.js"></script>
+    <script type="text/javascript" src="/static/hsia/js/nav.js"></script>
+    <script type="text/javascript" src="/static/hsia/js/handlebars.min.js"></script>
+    <script type="text/javascript" src="http://10.65.3.155/static/dist/snowflake.js"></script>
+    <script type="text/javascript" src="/static/hsia/js/custom.js"></script>
+    <style>
+    body #fancybox-content{
+        overflow: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+    </style>
+</head>
+
+<body data-configurl="/static/hsia/portal/default.json">
+<!-- Start -->
+<div id="Container">
+    <!-- Start of Header -->
+    <div id="Header">
+        <div id="Logo">
+            <h1>
+                <a href="{{ hotel_url }}">interTouch</a>
+            </h1>
+        </div>
+
+        <div id="TopContainer">
+
+            <!-- Start of Languages -->
+            <div id="TopNav">
+                <div role="ficap-languages"></div>
+            </div>
+            <!-- End of Languages -->
+
+            <!-- Condition Hide TopNav if Login -->
+
+            <!-- Start of Helpdesk -->
+            <div class="AlignRight" id="HelpDesk">
+                <a href="help.html" class="red iframe"><img src="/static/hsia/images/help_me.png" title='Click for Helpdesk Details.'/></a>
+            </div>
+            <!-- End of Helpdesk -->
+        </div>
+
+    </div>
+    <!-- End of Header -->
+    <!-- Start of LandingPageContent -->
+    <div id="BodyContainer">
+        <div id="LoyaltyContent">
+            <!-- Start of Left Navigation Buttons -->
+            <div class="Left">
+                <ul id="LeftNav">
+                    <li class="Connect"><a href="#" id="LoadConnect">Connect for the 1st Time</a></li>
+                    <li><img src="/static/hsia/images/SmallLogo.png" /></li>
+                </ul>
+            </div>
+            <!-- End of Left Navigation Buttons -->
+
+            <!-- Start of Right Column Content -->
+            <div class="functions Right" id="result">
+                <div class="LandingPage" id="LandingPage">
+            <h2 class="Title">Welcome to The Hotel</h2>
+            <h3 class="Tag">Enjoy high-speed internet access from wherever you are</h3>
+            <h4 class="Span">To begin, please pick a connection option from the left.</h4>
+            <p><img src="/static/hsia/images/HotelImg.png" /></p>
+        </div>
+
+    <div class="ConnectingColumn" id="ConnectingColumn" style="display: none;" >
+        <h2 class="Title">Choose Your Login Options</h2>
+        <h3 class="Tag">First-time Users</h3>
+
+        <!-- Start of Options -->
+        <div class="OptionsColumn">
+            <div role="ficap-content" class="content"></div>
+        </div>
+        <!-- End of Options -->
+    </div>
+</div>
+<!-- End  of Right Column Content -->
+
+
+    <script>
+    $("#LoadConnect").on('click', function(){
+        $('#ConnectingColumn').show();
+        $('#LandingPage').hide();
+        $('#AlreadyPurchaseColumn').hide();
+        $('#AdditionalDevicesColumn').hide();
+    });
+
+    $("#LoadPurchase").on('click', function(){
+        $('#AlreadyPurchaseColumn').show();
+        $('#LandingPage').hide();
+        $('#ConnectingColumn').hide();
+        $('#AdditionalDevicesColumn').hide();
+    });
+
+    $(document).ready(function() {
+        $(".red").fancybox({
+            'padding'           : 10,
+            'autoScale'         : false,
+            'height'            : 530,
+            'titleShow'         : false,
+            'transitionIn'      : 'none',
+            'transitionOut'     : 'none',
+            'type'              : 'iframe'
+        });
+
+        $(document).on('click', '.OptionsTitle', function(){
+            if( $(this).next().is(':hidden') ) { //If immediate next container is closed...
+                $('.OptionsTitle').removeClass('active').next().slideUp(); //Remove all "active" state and slide up the immediate next container
+                $(this).toggleClass('active').next().slideDown(); //Add "active" state to clicked trigger and slide down the immediate next container
+            }
+            return false; //Prevent the browser jump to the link anchor
+        });
+    });
+    </script>
+    <script id="languages-template" type="text/x-handlebars-template">
+        <div id="language" class="dropdown">
+            <button id="languageLabel" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <span id="current-language-name">{{current_language_name}}</span>
+                <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu sublanguage" aria-labelledby="languageLabel" id="language-dropdown LangNav">
+            </ul>
+        </div>
+    </script>
+    <script id="waiting-template" type="text/x-handlebars-template">
+        <div class="center">
+            <div><img src="/static/hsia/images/dot_loader_100x100.gif" border="0" /></div>
+        </div>
+    </script>
+
+    <script id="plan_select-template" type="text/x-handlebars-template">
+        <h2 id="def_portal_tab_purchase" class="OptionsTitle"><a href="#">Internet Plan</a></h2>
+        <div class="OptionsContent" style="display: none;">
+            <form id="plan_select" method="post" class="plan-form">
+                <div>{{plan_select.intro}}</div>
+                <div class="Login">
+                    <table border="0" width="100%">
+                        <tbody>
+                            <tr style="vertical-align:top;">
+                                <td style="width:150px;"><strong>{{plan_select.plan_label}}</strong></td>
+                                <td>
+                                    <table style="width:100%;">
+                                        <tr>
+                                        {{#each bill_plans}}
+                                            <td style="padding-bottom: 10px; width: 50%"><input type="radio" id="bill_plan_{{uuid}}" name="bill_plan" value="{{uuid}}" />&nbsp;{{name}}<br/>
+                                            </td>
+                                        </tr>
+                                        {{/each}}
+                                    </table>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div id="connect_block" style="display:none">
+                    <div class="checkbox">
+                        <label>
+                          <input type="checkbox" name="marketing_subscription">Subscribe to spam
+                        </label>
+                    </div>
+                    <div class="MarketingCollection" style="display:none;">
+                        <table border="0" width="100%">
+                            <tbody>
+                                <tr id="marketing_text">
+                                    <td colspan="2" style="padding-bottom:10px;">
+                                        To receive special offers and promotions, provide us with your email or mobile number.
+                                    </td>
+                                </tr>
+                                <tr id="email_collection">
+                                    <td>Email:</td>
+                                    <td>
+                                        <div class="marketing-field">
+                                            <input id="marketing_email" type="text" name="marketing_email" class="textbox" value="">
+                                            <div class="input-error"></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="mobile_collection">
+                                    <td>Mobile Number:</td>
+                                    <td style="padding-top:5px;">
+                                        <div class="marketing-field">
+                                            <input type="text" id="marketing_phone_number" name="marketing_phone_number" uppercase="true" class="textbox" value="">
+                                            <div class="input-error"></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="ConnectTo">
+                        <p>
+                            By clicking Connect to Internet, you agree to the <a href="/static/hsia/terms.html" class="red">Terms and Conditions</a>.
+                        </p>
+                        <p align="center">
+                            <input id="billplan_btn" type="button" value="Connect" class="ConnectBTN Buttons btn btn-default"/>
+                        </p>
+                    </div>
+                </div>
+            </form>
+            {{#if ask_credentials}}
+            <div>
+              <a class="signin" href="#">Sign in</a>
+            </div>
+            {{/if}}
+
+            {{#if guest}}
+            <div>
+              <a class="cancel" href="#">Logout</a>
+            </div>
+            {{/if}}
+        </div>
+    </script>
+
+    <script id="general_error-template" type="text/x-handlebars-template">
+        <div class="panel panel-danger">
+            <div class="panel-heading">
+                <h3 class="panel-title">{{general_error.title}}</h3>
+            </div>
+            <div class="panel-body">
+                {{general_error.body}}
+            </div>
+        </div>
+    </script>
+
+    <script id="connected-template" type="text/x-handlebars-template">
+        <div class="center">
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <h3 class="panel-title">{{connected.success}}</h3>
+                </div>
+                <div class="panel-body">
+                    <div>
+                        {{connected.now_proceed}}
+                    </div>
+                    <a href="{{requested_url}}" role="ficap-autoredirect" data-delay="5">
+                        <h3>
+                            {{requested_url}}
+                        </h3>
+                    </a>
+                    <div class="progress" role="ficap-progress" style="display:none;">
+                        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </script>
+
+    <script id="already_connected-template" type="text/x-handlebars-template">
+        <div class="center">
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <h3 class="panel-title">{{already_connected.success}}</h3>
+                </div>
+                <div class="panel-body">
+                    <div>
+                        {{already_connected.now_proceed}}
+                    </div>
+                    <a href="{{requested_url}}">
+                        {{requested_url}}
+                    </a>
+                </div>
+            </div>
+        </div>
+    </script>
+    </div>
+    <!-- End  of LandingPageContent -->
+    </div>
+
+    <div id="Footer" class="small">
+        <p>Copyright © 2015 interTouch Pte. Ltd. All Rights Reserved. interTouch and its logos are registered marks and services marks used by the interTouch Group of Companies. Other trademarks and logos are the property of their respective owners.</p>
+    </div>
+
+</div>
+<pre id="log_contents" style="display:none;border:1px solid #ccc;padding:20px;margin:20px;background-color:#fff;white-space: pre-wrap;white-space: -moz-pre-wrap !important;white-space: -pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;"></pre>
+<!-- End -->
+</body>
+
+</html>

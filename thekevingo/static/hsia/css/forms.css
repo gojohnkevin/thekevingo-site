@@ -1,0 +1,71 @@
+.textbox{
+	border:1px solid #d8d8d8;
+	font:12px Arial, Helvetica, sans-serif;
+}
+
+.Login input.textbox{
+	padding:5px;
+	width:160px;
+}
+
+.Buttons{
+	padding: 0;
+	margin: 0;
+	border: 0;
+	font-size:0px;
+	line-height:0px;
+	overflow: hidden;
+	text-indent:-9999px;
+	display:block;
+	color:transparent;
+	cursor: pointer; /* hand-shaped cursor */
+	cursor: hand; /* for IE 5.x */
+
+}
+
+.ConnectBTN{
+	width: 180px;/* Width of button image */
+	height: 56px;/* Height of button image */
+	background: transparent url(../images/ConnectBtn.png) no-repeat;
+}
+
+.SMSBTN{
+    width: 152px;/* Width of button image */
+    height: 31px;/* Height of button image */
+    background: transparent url(../images/SMSBtn.png) no-repeat;
+}
+.SMSBTN:hover{
+    background-position:bottom left;
+    cursor:pointer;
+}
+
+
+.SubmitBTN{
+	width: 75px;/* Width of button image */
+	height: 31px;/* Height of button image */
+	background: transparent url(../images/SubmitBtn.png) no-repeat;
+}
+
+.ConfirmBTN{
+	width: 75px;/* Width of button image */
+	height: 31px;/* Height of button image */
+	background: transparent url(../images/ConfirmBtn.png) no-repeat;
+}
+
+
+
+.OpenBTN{
+	width: 180px;/* Width of button image */
+	height: 56px;/* Height of button image */
+	background: transparent url(../images/OpenNewBtn.png) no-repeat;
+}
+
+.StopBTN{
+	width: 136px;/* Width of button image */
+	height: 52px;/* Height of button image */
+	background: transparent url(../images/StopBtn.png) no-repeat;
+}
+
+input[type="submit"]:hover, .SubmitBTN:hover, .PrintBTN:hover, .Buttons:hover{
+	background-position:bottom left;
+}

@@ -1,0 +1,644 @@
+body {
+        background: #727876;
+}
+
+#Container{
+    background:url(../images/TemplateBackground.jpg) top center no-repeat;
+    font:11px Verdana, Arial, Helvetica, sans-serif;
+    color:#9f9f9f;
+    margin:0 auto;
+    position:relative;
+    width:1024px;
+        height: 800px;
+}
+
+/*-----------------------------------------------------
+Header
+----------------------------------------------------- */
+#Header{
+    height:86px;
+    position:relative;
+    width:1024px;
+}
+
+#Logo h1{
+    background:url(../images/Logo.png) no-repeat 0 0;
+    display:block;
+    height:86px;
+    position:absolute;
+    left:44px;
+    top:0px;
+    text-indent:-99999px;
+    width:198px;
+}
+
+#Logo h1 a{
+    display:block;
+    height:100%;
+    width:100%;
+}
+
+#TopContainer{
+    position:absolute;
+    top:0;
+    right:15px;
+    width:800px;
+}
+
+#TopNav{
+    height:42px;
+}
+
+ul#LangNav{
+    float:right;
+    padding:15px 0 0;
+}
+
+ul#LangNav li{
+    display:inline;
+    float:left;
+    margin-left:1px;
+    margin-bottom: 1px;
+    height: 30px;
+}
+
+ul#LangNav li a{
+    color:#484848;
+    display:block;
+    float:left;
+    font-size:11px;
+    padding:0px 2px 0 0px;
+    height: 30px;
+}
+
+#HelpDesk{
+    clear: right;
+    height:42px;
+    line-height:30px;
+    padding:0 10px 0 0;
+}
+
+/*-----------------------------------------------------
+Content
+----------------------------------------------------- */
+#LoyaltyContent{
+/*  background:#999;*/
+    position:absolute;
+    top:107px;
+    left:34px;
+    width:975px;
+}
+
+#LoyaltyContent .Left{
+/*  position:absolute;*/
+    width:269px;
+}
+
+#LoyaltyContent .Right{
+    color:#292929;
+    font:12px Verdana, Arial, Helvetica, sans-serif;
+    height:460px;
+    left:320px;
+    position:absolute;
+    top:5px;
+    width:655px;
+/*  background:#ccc;*/
+}
+
+ul#LeftNav {
+    float:left;
+    margin:0;
+    padding:0;
+    width:269px;
+}
+
+ul#LeftNav li {
+    display:block;
+    float: left;
+    margin: 0 0 13px 0;
+    padding: 0;
+    width:269px;
+}
+
+ul#LeftNav a{
+    background-position:0 0;
+    display:block;
+    float:left;
+    height:131px;
+    text-indent:-99999px;
+    width:269px;
+}
+
+ul#LeftNav a:hover{
+    background-position:left -131px;
+}
+
+ul#LeftNav li.Connect a{
+    background-image:url(../images/ConnectNav.png);
+}
+
+ul#LeftNav li.Purchase a{
+    background-image:url(../images/PurchaseNav.png);
+}
+
+
+
+ul#LeftNav li.Active a{
+    background-position:left bottom;
+}
+
+ul#LeftNav li.AddDevices, ul#LeftNav li.BCPrepaid{
+    margin:0;
+}
+
+#ConnectedLeftColumn{
+    float:left;
+    width:708px;
+    position:absolute;
+    height:572px;
+}
+
+#ConnectHeader{
+    height:107px;
+}
+
+#CounterContainer{
+    position:absolute;
+    top:40px;
+    left:450px;
+    width:270px
+}
+
+.CounterColumn{
+    float:left;
+    margin:0 20px 0 0;
+    display:inline;
+}
+
+.CounterColumn h3, span#Date{
+    font:bold 10px Arial, Helvetica, sans-serif;
+    text-transform:uppercase
+}
+
+.CounterColumn span{
+    color:#000;
+}
+
+span#Time{
+    font:17px Arial, Helvetica, sans-serif;
+}
+
+#TabContainer{
+    margin-left:34px;
+}
+.ConnectedTab{
+    width:657px;
+}
+
+#TopTab{
+    background:url(../images/TopCornerBg.jpg) 0 0 no-repeat;
+    height:31px;
+}
+
+#TopTab ul{
+    margin:0;
+    padding:6px 0 0 15px;
+}
+
+#TopTab ul li{
+    float:left;
+    display:inline;
+    margin:0;
+    padding:0;
+    height:25px;
+    line-height:20px;
+}
+#TopTab ul li a{
+    background:url(../images/TabList.jpg) no-repeat top right;
+    color:#000;
+    display:inline-block;
+    height:23px;
+    padding:0 9px;
+}
+
+#TopTab ul li a.last{
+    background:none;
+}
+
+#TopTab ul li a:hover, #TopTab ul li.Active a{
+    background:#aa0d32;
+    border-top:1px solid #cd7186;
+    color:#fff;
+    text-decoration:none;
+    height:22px;
+}
+
+#BottomTab{
+    background:url(../images/BottomCornerBg.png) no-repeat scroll 0 0 / 100%;
+    color:#484848;
+    height:340px;
+}
+
+#FolioReviewContainer, #PrintServicesContainer, #BoardingPassContainer, #FlightScheduleContainer{
+    padding:20px;
+    font-size:12px;
+    min-height:294px;
+}
+
+#FolioReviewContainer p{
+    margin-bottom:10px;
+}
+
+#FolioReviewTable{
+    margin:10px 0;
+}
+
+#FolioReviewTable table{
+    border:2px solid #e2e2e2;
+    border-collapse:collapse;
+}
+
+#FolioReviewTable table th, #FolioReviewTable td, #MailCenter table th, #FlightTable table th, .Destination, .Time, .Flight, .Status{
+    padding-left:10px;
+    text-align:left;
+}
+
+#FolioReviewTable table tr, #FolioReviewTable table thead.Title, #MailCenter table thead.Title, #MailCenter table td, #FlightTable table thead.Title{
+    height:19px;
+}
+
+#FolioReviewTable table thead.Title, #MailCenter table thead.Title, #FlightTable thead.Title{
+    background:url(../images/trBg.jpg) repeat-x 0 0;
+    color:#fff;
+    font-size:10px;
+    font-weight:bold;
+    width:460px
+}
+
+#MailCenter table thead.Title{
+    width:100%;
+}
+
+#FlightTable table th{
+    text-transform:uppercase;
+}
+
+#FlightTable td.Lines img{
+    padding:0;
+}
+
+.Lines{
+    width:90px;
+}
+
+.Destination{
+    width:140px;
+}
+
+.Time{
+    width:60px;
+}
+
+.Terminal,#FlightTable table th.Terminal{
+    text-align:center;
+    padding:0;
+}
+
+#MailCenter table td.Subject{
+    padding-left:23px;
+}
+
+
+
+#MailCenter tr:hover, table tr.Selected, #MailCenter tr:hover{
+    background-color:#aa0d32;
+    color:#fff;
+    cursor:pointer;
+}
+
+#FolioReviewTable td, .Navigation ul li, #TableAirlines td, #MailCenter td, .Destination, .Time, .Terminal, .Flight, .Status{
+    font-size:10px;
+    vertical-align:middle;
+}
+
+#FolioReviewTable .Item{
+    width:320px;
+}
+
+#FolioReviewTable .Price, #FolioReviewTable th.Item{
+    border-right:2px solid #e2e2e2;
+}
+
+#FolioReviewTable .Price strong{
+    font-size:11px;
+}
+
+table tr.Odd{
+    background:#f2f2f2;
+}
+
+table tr.Even{
+    background:#e1e1e1;
+}
+
+#FolioReviewTable .Date{
+    width:150px;
+}
+
+.Navigation ul li, ul#FlightNav li{
+    float:left;
+    display:inline;
+}
+
+ul#FlightNav{
+    margin:0 0 -1px 2px;
+}
+
+ul#FlightNav li a{
+    background:#484848;
+    border-right:1px solid #000;
+    color:#a4a4a4;
+    font:bold 11px Verdana, Arial, Helvetica, sans-serif;
+    display:block;
+    line-height:23px;
+    height:24px;
+    padding:0 5px;
+}
+
+ul#FlightNav li a:hover, ul#FlightNav li.Active a{
+    background:#aa0d32;
+    border-right:1px solid #7b001d;
+    color:#fff;
+}
+
+ul#FlightNav li a.TabLeft{
+    background:url(../images/TabLeft.jpg) #aa0d32 no-repeat 0 0;
+}
+
+#FlightTable{
+    width:617px;
+}
+
+.Navigation ul li a{
+    color:#424242;
+    text-decoration:underline;
+}
+
+.Navigation ul li a:hover, ul#FlightNav li a:hover{
+    text-decoration:none;
+}
+
+#PrintServicesContainer{
+    padding:0;
+    margin:0;
+}
+
+#PrintServicesContainer .Column, #GuestMessagesContainer .Column, #UserDetailsContainer .Column{
+    float:left;
+    padding:20px;
+}
+
+#PrintServicesContainer .Left, #GuestMessagesContainer .Left, #UserDetailsContainer .Left{
+    border-right:1px solid #d5d5d5;
+    width:270px;
+    height:290px
+}
+
+
+#UserDetailsContainer .Right{
+    width:270px;
+}
+#PrintServicesContainer .Right, #UserDetailsContainer .Left{
+    width:300px
+}
+
+#UserDetailsContainer .Right .PlanActive{
+    background:#fff;
+    border:1px solid #d8d8d8;
+    padding:5px 0 25px;
+    margin:5px 0;
+}
+
+#UserDetailsContainer .Right h4 a{
+    font-size:11px;
+}
+
+.PlanOptions h4, .selectbox{
+    margin:0 0 5px;
+}
+
+.PlanOptions h4, .PlansContent{
+    margin-left:60px;
+}
+
+#TableAirlines td{
+    height:20px;
+}
+
+#TableAirlines td span{
+    float:left;
+}
+
+#TableAirlines td span img{
+    padding-right:10px;
+}
+
+#TableAirlines td .AirLineName{
+    line-height:18px
+}
+
+#TableAirlines tr{
+    height:21px;
+}
+
+#GuestMessagesContainer, #UserDetailsContainer{
+    font-size:12px;
+}
+
+#GuestMessagesContainer .Right{
+    padding:20pxpx;
+    overflow-y:scroll;
+    height:270px;
+    width:300px
+}
+
+#MailHeader h4{
+    font-weight:bold;
+    font-size:12px;
+}
+
+#MailHeader span{
+    font-size:10px;
+}
+
+#MailContent{
+    padding:10px 0;
+    border:1px solid #ccc;
+    border-left:none;
+    border-right:none;
+    margin:10px 0;
+}
+
+#LoginDetails{
+    background:url(../images/LoginBg.jpg) no-repeat top right;
+    height:82px;
+}
+
+#LoginDetails td.Label{
+    width:105px;
+}
+
+#UserDetailsContainer td.Email{
+    width:175px;
+}
+
+#UserDetailsContainer .textbox{
+    width:160px;
+    color:#666;
+    padding:5px;
+}
+/*-----------------------------------------------------
+Right Columns
+----------------------------------------------------- */
+.AdditionalDevicesColumn .Login{
+    background:url(../images/AdditionalBackground.png) top left no-repeat;
+    min-height:113px;
+}
+
+.Login tr{
+    height:35px;
+    vertical-align:middle;
+}
+
+.Login{
+    padding:0 0 0 0;
+}
+
+.ConnectingColumn .Login tr{
+    height:15px;
+    vertical-align:middle;
+}
+.ConnectingColumn #PrepaidLogin{
+    background:url(../images/PrepaidBackground.png) no-repeat top left;
+}
+
+.ConnectingColumn #PrepaidLogin tr, .ConnectingColumn #RoamingLogin tr{
+    height:30px;
+}
+
+.ConnectingColumn #RoamingLogin{
+    background:url(../images/iPassBackground.png) no-repeat 0px -8px;
+}
+
+td.FormLabel{
+    width:150px;
+}
+
+
+.ConnectTo{
+    float:left;
+    padding:10px 0 0 0;
+    text-align:center;
+    width:655px;
+}
+
+#ConnectedRightColumn{
+    background:url(../images/RightLogo.png) no-repeat 0 5px;
+    float:right;
+    right:16px;
+    width:300px;
+    position:absolute;
+}
+
+#ConnectedRightColumn .AlignRight{
+    height:42px;
+    line-height:48px;
+}
+
+#ConnectedRightColumn ul li{
+    display:block;
+    float:left;
+    height:250px;
+    margin:45px 0 15px 0;
+    width:300px;
+}
+/*-----------------------------------------------------
+Footer
+----------------------------------------------------- */
+#BottomButtons{
+    margin-left:34px;
+}
+
+.BTNCol{
+    margin-right:5px
+}
+
+.FootNote{
+    width:223px;
+    font-size:10px;
+    color:#484848;
+    margin:4px 0 0 10px;
+}
+
+.FootNote h4{
+    color:#aa0d32;
+    font-size:11px;
+    font-weight:bold;
+}
+
+#BottomeListing{
+    position:absolute;
+    bottom:5px;
+    left:24px;
+}
+
+#BottomeListing ul li, .BTNCol{
+    float:left;
+    display:inline;
+}
+
+#BottomeListing ul li a{
+    text-transform:uppercase;
+    color:#484848;
+    border-right:1px solid #484848;
+    padding:0 10px;
+}
+
+#BottomeListing ul li a.last{
+    border:none;
+}
+
+#FooterAds{
+    border-top:1px solid #a2a2a2;
+    bottom:60px;
+    height:78px;
+    position:absolute;
+    width:1024px;
+}
+
+ul#BottomAds{
+    left:44px;
+    position:absolute;
+    top:10px;
+}
+
+ul#BottomAds li{
+    float:left;
+    display:inline;
+    padding:0px 7px 0 0;
+    width:468px
+}
+
+#Footer{
+    background:#FFF url(../images/FooterLogo.png) 20px no-repeat;
+    bottom:0;
+    height:60px;
+    padding:0px 40px 0 175px;
+    position:absolute;
+    overflow:hidden;
+        z-index: 9999 !important;
+}
+
+#Footer p{
+    padding-top:15px;
+}
