@@ -13,8 +13,7 @@
     <link rel="stylesheet" type="text/css" href="/static/hsia/js/fancybox/jquery.fancybox-1.3.4.css" media="screen" />
     <script type="text/javascript" src="/static/hsia/js/fancybox/jquery.fancybox-1.3.4.pack.js"></script>
     <script type="text/javascript" src="/static/hsia/js/nav.js"></script>
-    <script type="text/javascript" src="/static/hsia/js/handlebars.min.js"></script>
-    <script type="text/javascript" src="http://10.65.3.155/static/dist/snowflake.min.js"></script>
+    <script type="text/javascript" src="http://localhost:8000/static/dist/snowflake.min.js"></script>
     <script type="text/javascript" src="/static/hsia/js/custom.js"></script>
     <style>
     body #fancybox-content{
@@ -124,7 +123,7 @@
         });
     });
     </script>
-    <script id="languages-template" type="text/x-handlebars-template">
+    <div id="languages-template" type="text/snowflake-template">
         <div id="language" class="dropdown">
             <button id="languageLabel" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <span id="current-language-name">{{current_language_name}}</span>
@@ -133,18 +132,17 @@
             <ul class="dropdown-menu sublanguage" aria-labelledby="languageLabel" id="language-dropdown LangNav">
             </ul>
         </div>
-    </script>
+    </div>
 
-    <script id="waiting-template" type="text/x-handlebars-template">
+    <div id="waiting-template" type="text/snowflake-template">
         <div class="center">
             <div><img src="/static/hsia/images/dot_loader_100x100.gif" border="0" /></div>
         </div>
-    </script>
+    </div>
 
-    <script id="plan_select-template" type="text/x-handlebars-template">
+    <div id="plan_select-template" type="text/snowflake-template">
         <h2 id="def_portal_tab_purchase" class="OptionsTitle"><a href="#">Internet Plan</a></h2>
         <div class="OptionsContent" style="display: none;">
-            {{#if bill_plans}}
             <form id="plan_select" method="post" class="plan-form">
                 <div>{{plan_select.intro}}</div>
                 <div class="Login">
@@ -169,14 +167,14 @@
                 <div id="connect_block" style="display:none">
                     <div class="checkbox">
                         <label>
-                          <input type="checkbox" name="marketing_subscription">&nbsp;I agree to receive special offers and promotions, and acknowledge that I can opt out any time.
+                          <input type="checkbox" name="marketing_subscription">Subscribe to spam
                         </label>
                     </div>
                     <div class="MarketingCollection" style="display:none;">
                         <table border="0" width="100%">
                             <tbody>
                                 <tr id="marketing_text">
-                                    <td colspan="2" style="padding-top:10px;padding-bottom:10px;">
+                                    <td colspan="2" style="padding-bottom:10px;">
                                         To receive special offers and promotions, provide us with your email or mobile number.
                                     </td>
                                 </tr>
@@ -211,7 +209,6 @@
                     </div>
                 </div>
             </form>
-            {{/if}}
             {{#if ask_credentials}}
             <div>
               <a class="signin" href="#">Sign in</a>
@@ -224,9 +221,9 @@
             </div>
             {{/if}}
         </div>
-    </script>
+    </div>
 
-    <script id="general_error-template" type="text/x-handlebars-template">
+    <div id="general_error-template" type="text/snowflake-template">
         <div class="panel panel-danger">
             <div class="panel-heading">
                 <h3 class="panel-title">{{general_error.title}}</h3>
@@ -235,9 +232,9 @@
                 {{general_error.body}}
             </div>
         </div>
-    </script>
+    </div>
 
-    <script id="connected-template" type="text/x-handlebars-template">
+    <div id="connected-template" type="text/snowflake-template">
         <div class="center">
             <div class="panel panel-info">
                 <div class="panel-heading">
@@ -259,9 +256,9 @@
                 </div>
             </div>
         </div>
-    </script>
+    </div>
 
-    <script id="already_connected-template" type="text/x-handlebars-template">
+    <div id="already_connected-template" type="text/snowflake-template">
         <div class="center">
             <div class="panel panel-info">
                 <div class="panel-heading">
@@ -277,44 +274,7 @@
                 </div>
             </div>
         </div>
-    </script>
-
-    <script id="credentials-template" type="text/x-handlebars-template">
-        <div class="center">
-            <div>
-              <form id="credentials" class="credentials-form">
-                <div class="LoginForm">
-                    <table border="0" width="100%">
-                        <tbody>
-                            <tr>
-                                <td>Login:</td>
-                                <td>
-                                    <div>
-                                        <input id="login" type="text" name="login" class="textbox">
-                                        <div class="input-error"></div>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Password:</td>
-                                <td style="padding-top:5px;">
-                                    <div>
-                                        <input type="password" id="password" name="password" class="textbox">
-                                        <div class="input-error"></div>
-                                    </div>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                <input type="button" class="btn btn-sm btn-primary btn-loader" value="Confirm"/>
-                <div>
-                  <a class="cancel" href="#">Cancel</a>
-                </div>
-              </form>
-            </div>
-        </div>
-    </script>
+    </div>
     </div>
     <!-- End  of LandingPageContent -->
     </div>
