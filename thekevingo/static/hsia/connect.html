@@ -25,104 +25,83 @@
 </head>
 
 <body data-configurl="/static/hsia/portal/default.json">
-<!-- Start -->
-<div id="Container">
-    <!-- Start of Header -->
-    <div id="Header">
-        <div id="Logo">
-            <h1>
-                <a href="{{ hotel_url }}">interTouch</a>
-            </h1>
-        </div>
-
-        <div id="TopContainer">
-
-            <!-- Start of Languages -->
-            <div id="TopNav">
-                <div role="ficap-languages"></div>
+    <div id="Container">
+        <div id="Header">
+            <div id="Logo">
+                <h1>
+                    <a href="{{ hotel_url }}">interTouch</a>
+                </h1>
             </div>
-            <!-- End of Languages -->
 
-            <!-- Condition Hide TopNav if Login -->
-
-            <!-- Start of Helpdesk -->
-            <div class="AlignRight" id="HelpDesk">
-                <a href="help.html" class="red iframe"><img src="/static/hsia/images/help_me.png" title='Click for Helpdesk Details.'/></a>
+            <div id="TopContainer">
+                <div id="TopNav">
+                    <div role="ficap-languages"></div>
+                </div>
+                <div class="AlignRight" id="HelpDesk">
+                    <a href="help.html" class="red iframe"><img src="/static/hsia/images/help_me.png" title='Click for Helpdesk Details.'/></a>
+                </div>
             </div>
-            <!-- End of Helpdesk -->
-        </div>
 
+        </div>
+        <div id="BodyContainer">
+            <div id="LoyaltyContent">
+                <div class="Left">
+                    <ul id="LeftNav">
+                        <li class="Connect"><a href="#" id="LoadConnect">Connect for the 1st Time</a></li>
+                        <li><img src="/static/hsia/images/SmallLogo.png" /></li>
+                    </ul>
+                </div>
+                <div class="functions Right" id="result">
+                    <div class="LandingPage" id="LandingPage">
+                <h2 class="Title">Welcome to The Hotel</h2>
+                <h3 class="Tag">Enjoy high-speed internet access from wherever you are</h3>
+                <h4 class="Span">To begin, please pick a connection option from the left.</h4>
+                <p><img src="/static/hsia/images/HotelImg.png" /></p>
+            </div>
+
+        <div class="ConnectingColumn" id="ConnectingColumn" style="display: none;" >
+            <h2 class="Title">Choose Your Login Options</h2>
+            <h3 class="Tag">First-time Users</h3>
+            <div class="OptionsColumn">
+                <div role="ficap-content" class="content"></div>
+            </div>
+        </div>
     </div>
-    <!-- End of Header -->
-    <!-- Start of LandingPageContent -->
-    <div id="BodyContainer">
-        <div id="LoyaltyContent">
-            <!-- Start of Left Navigation Buttons -->
-            <div class="Left">
-                <ul id="LeftNav">
-                    <li class="Connect"><a href="#" id="LoadConnect">Connect for the 1st Time</a></li>
-                    <li><img src="/static/hsia/images/SmallLogo.png" /></li>
-                </ul>
-            </div>
-            <!-- End of Left Navigation Buttons -->
 
-            <!-- Start of Right Column Content -->
-            <div class="functions Right" id="result">
-                <div class="LandingPage" id="LandingPage">
-            <h2 class="Title">Welcome to The Hotel</h2>
-            <h3 class="Tag">Enjoy high-speed internet access from wherever you are</h3>
-            <h4 class="Span">To begin, please pick a connection option from the left.</h4>
-            <p><img src="/static/hsia/images/HotelImg.png" /></p>
-        </div>
-
-    <div class="ConnectingColumn" id="ConnectingColumn" style="display: none;" >
-        <h2 class="Title">Choose Your Login Options</h2>
-        <h3 class="Tag">First-time Users</h3>
-
-        <!-- Start of Options -->
-        <div class="OptionsColumn">
-            <div role="ficap-content" class="content"></div>
-        </div>
-        <!-- End of Options -->
-    </div>
-</div>
-<!-- End  of Right Column Content -->
-
-
-    <script>
-    $("#LoadConnect").on('click', function(){
-        $('#ConnectingColumn').show();
-        $('#LandingPage').hide();
-        $('#AlreadyPurchaseColumn').hide();
-        $('#AdditionalDevicesColumn').hide();
-    });
-
-    $("#LoadPurchase").on('click', function(){
-        $('#AlreadyPurchaseColumn').show();
-        $('#LandingPage').hide();
-        $('#ConnectingColumn').hide();
-        $('#AdditionalDevicesColumn').hide();
-    });
-
-    $(document).ready(function() {
-        $(".red").fancybox({
-            'padding'           : 10,
-            'autoScale'         : false,
-            'height'            : 530,
-            'titleShow'         : false,
-            'transitionIn'      : 'none',
-            'transitionOut'     : 'none',
-            'type'              : 'iframe'
+    <script type="text/javascript">
+        $("#LoadConnect").on('click', function(){
+            $('#ConnectingColumn').show();
+            $('#LandingPage').hide();
+            $('#AlreadyPurchaseColumn').hide();
+            $('#AdditionalDevicesColumn').hide();
         });
 
-        $(document).on('click', '.OptionsTitle', function(){
-            if( $(this).next().is(':hidden') ) { //If immediate next container is closed...
-                $('.OptionsTitle').removeClass('active').next().slideUp(); //Remove all "active" state and slide up the immediate next container
-                $(this).toggleClass('active').next().slideDown(); //Add "active" state to clicked trigger and slide down the immediate next container
-            }
-            return false; //Prevent the browser jump to the link anchor
+        $("#LoadPurchase").on('click', function(){
+            $('#AlreadyPurchaseColumn').show();
+            $('#LandingPage').hide();
+            $('#ConnectingColumn').hide();
+            $('#AdditionalDevicesColumn').hide();
         });
-    });
+
+        $(document).ready(function() {
+            $(".red").fancybox({
+                'padding'           : 10,
+                'autoScale'         : false,
+                'height'            : 530,
+                'titleShow'         : false,
+                'transitionIn'      : 'none',
+                'transitionOut'     : 'none',
+                'type'              : 'iframe'
+            });
+
+            $(document).on('click', '.OptionsTitle', function(){
+                if( $(this).next().is(':hidden') ) { //If immediate next container is closed...
+                    $('.OptionsTitle').removeClass('active').next().slideUp(); //Remove all "active" state and slide up the immediate next container
+                    $(this).toggleClass('active').next().slideDown(); //Add "active" state to clicked trigger and slide down the immediate next container
+                }
+                return false; //Prevent the browser jump to the link anchor
+            });
+        });
     </script>
     <script id="languages-template" type="text/x-handlebars-template">
         <div id="language" class="dropdown">
@@ -316,7 +295,6 @@
         </div>
     </script>
     </div>
-    <!-- End  of LandingPageContent -->
     </div>
 
     <div id="Footer" class="small">
