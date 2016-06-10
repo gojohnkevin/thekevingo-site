@@ -84,14 +84,16 @@
         });
 
         $(document).ready(function() {
-            $(".red").fancybox({
-                'padding'           : 10,
-                'autoScale'         : false,
-                'height'            : 530,
-                'titleShow'         : false,
-                'transitionIn'      : 'none',
-                'transitionOut'     : 'none',
-                'type'              : 'iframe'
+            $("#Container").on("focusin", function(){
+                $(".red").fancybox({
+                    'padding'           : 10,
+                    'autoScale'         : false,
+                    'height'            : 530,
+                    'titleShow'         : false,
+                    'transitionIn'      : 'none',
+                    'transitionOut'     : 'none',
+                    'type'              : 'iframe'
+                });
             });
 
             $(document).on('click', '.OptionsTitle', function(){
