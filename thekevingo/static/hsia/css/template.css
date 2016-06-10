@@ -49,12 +49,12 @@ Header
     height:42px;
 }
 
-ul#LangNav{
+ul.sublanguage{
     float:right;
     padding:15px 0 0;
 }
 
-ul#LangNav li{
+ul.sublanguage li{
     display:inline;
     float:left;
     margin-left:1px;
@@ -62,13 +62,14 @@ ul#LangNav li{
     height: 30px;
 }
 
-ul#LangNav li a{
+ul.sublanguage li a{
     color:#484848;
     display:block;
     float:left;
     font-size:11px;
     padding:0px 2px 0 0px;
     height: 30px;
+    font-size:0;
 }
 
 #HelpDesk{

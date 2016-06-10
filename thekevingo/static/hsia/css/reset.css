@@ -73,100 +73,100 @@ p {
 	float:right;
 }
 
-ul#LangNav li a{
+ul.sublanguage li a{
 	height:25px;
 	width: 70px;
 }
 
-ul#LangNav li.lang_en a{
+ul.sublanguage li a[data-code=en]{
 	background-image:url(../images/language/en.png);
 }
 
-ul#LangNav li.lang_en a:hover, ul#LangNav li.lang_en_active a{
+ul.sublanguage li a[data-code=en]:hover, ul#LangNav li.lang_en_active a{
 	background-image:url(../images/language/en_over.png);
 }
 
-ul#LangNav li.lang_ar a{
+ul.sublanguage li a[data-code=ar]{
 	background-image:url(../images/language/ar.png);
 }
-ul#LangNav li.lang_ar a:hover, ul#LangNav li.lang_ar_active a{
+ul.sublanguage li a[data-code=ar]:hover, ul#LangNav li.lang_ar_active a{
 	background-image:url(../images/language/ar_over.png);
 }
 
-ul#LangNav li.lang_de a{
+ul.sublanguage li a[data-code=de]{
 	background-image:url(../images/language/de.png);
 }
-ul#LangNav li.lang_de a:hover, ul#LangNav li.lang_de_active a{
+ul.sublanguage li a[data-code=de]:hover, ul#LangNav li.lang_de_active a{
 	background-image:url(../images/language/de_over.png);
 }
 
-ul#LangNav li.lang_fr a{
+ul.sublanguage li a[data-code=fr]{
 	background-image:url(../images/language/fr.png);
 }
-ul#LangNav li.lang_fr a:hover, ul#LangNav li.lang_fr_active a{
+ul.sublanguage li a[data-code=fr]:hover, ul#LangNav li.lang_fr_active a{
 	background-image:url(../images/language/fr_over.png);
 }
 
-ul#LangNav li.lang_it a{
+ul.sublanguage li a[data-code=it]{
 	background-image:url(../images/language/it.png);
 }
-ul#LangNav li.lang_it a:hover, ul#LangNav li.lang_it_active a{
+ul.sublanguage li a[data-code=it]:hover, ul#LangNav li.lang_it_active a{
 	background-image:url(../images/language/it_over.png);
 }
 
-ul#LangNav li.lang_es a{
+ul.sublanguage li a[data-code=es]{
 	background-image:url(../images/language/es.png);
 }
-ul#LangNav li.lang_es a:hover, ul#LangNav li.lang_es_active a{
+ul.sublanguage li a[data-code=es]:hover, ul#LangNav li.lang_es_active a{
 	background-image:url(../images/language/es_over.png);
 }
 
-ul#LangNav li.lang_ja a{
+ul.sublanguage li a[data-code=ja]{
 	background-image:url(../images/language/ja.png);
 }
-ul#LangNav li.lang_ja a:hover, ul#LangNav li.lang_ja_active a{
+ul.sublanguage li a[data-code=ja]:hover, ul#LangNav li.lang_ja_active a{
 	background-image:url(../images/language/ja_over.png);
 }
 
-ul#LangNav li.lang_ko a{
+ul.sublanguage li a[data-code=ko]{
 	background-image:url(../images/language/ko.png);
 }
-ul#LangNav li.lang_ko a:hover, ul#LangNav li.lang_ko_active a{
+ul.sublanguage li a[data-code=ko]:hover, ul#LangNav li.lang_ko_active a{
 	background-image:url(../images/language/ko_over.png);
 }
 
-ul#LangNav li.lang_pt a{
+ul.sublanguage li a[data-code=pt]{
 	background-image:url(../images/language/pt.png);
 }
-ul#LangNav li.lang_pt a:hover, ul#LangNav li.lang_pt_active a{
+ul.sublanguage li a[data-code=pt]:hover, ul#LangNav li.lang_pt_active a{
 	background-image:url(../images/language/pt_over.png);
 }
 
-ul#LangNav li.lang_ru a{
+ul.sublanguage li a[data-code=ru]{
 	background-image:url(../images/language/ru.png);
 }
-ul#LangNav li.lang_ru a:hover, ul#LangNav li.lang_ru_active a{
+ul.sublanguage li a[data-code=ru]:hover, ul#LangNav li.lang_ru_active a{
 	background-image:url(../images/language/ru_over.png);
 }
 
-ul#LangNav li.lang_tr a{
+ul.sublanguage li a[data-code=tr]{
 	background-image:url(../images/language/tr.png);
 }
-ul#LangNav li.lang_tr a:hover, ul#LangNav li.lang_tr_active a{
+ul.sublanguage li a[data-code=tr]:hover, ul#LangNav li.lang_tr_active a{
 	background-image:url(../images/language/tr_over.png);
 }
 
-ul#LangNav li.lang_zh-cn a{
+ul.sublanguage li a[data-code=zh-cn]{
 	background-image:url(../images/language/zh-cn.png);
 }
-ul#LangNav li.lang_zh-cn a:hover, ul#LangNav li.lang_zh-cn_active a{
+ul.sublanguage li a[data-code=zh-cn]:hover, ul#LangNav li.lang_zh-cn_active a{
 	background-image:url(../images/language/zh-cn_over.png);
 }
 
-ul#LangNav li.lang_zh-tw a{
+ul.sublanguage li a[data-code=zh-tw]{
 	background-image:url(../images/language/zh-tw.png);
 }
-ul#LangNav li.lang_zh-tw a:hover, ul#LangNav li.lang_zh-tw_active a{
+ul.sublanguage li a[data-code=zh-tw]:hover, ul#LangNav li.lang_zh-tw_active a{
 	background-image:url(../images/language/zh-tw_over.png);
 }
 ul#CreditCardLogos {
