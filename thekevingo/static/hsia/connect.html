@@ -25,7 +25,7 @@
 </head>
 
 <body data-configurl="/static/hsia/portal/default.json">
-    <div role="ficap-container" class="content"></div>
+    <div role="ficap-container" id="main-container" class="content"></div>
 
     <script type="text/javascript">
         $(document).on('click', "#LoadConnect", function(){
@@ -43,7 +43,7 @@
         });
 
         $(document).ready(function() {
-            $("#Container").on("focusin", function(){
+            $("#main-container").on("focusin", function(){
                 $(".red").fancybox({
                     'padding'           : 10,
                     'autoScale'         : false,
