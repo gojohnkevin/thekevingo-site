@@ -25,48 +25,7 @@
 </head>
 
 <body data-configurl="/static/hsia/portal/default.json">
-    <div id="Container">
-        <div id="Header">
-            <div id="Logo">
-                <h1>
-                    <a href="{{ hotel_url }}">interTouch</a>
-                </h1>
-            </div>
-
-            <div id="TopContainer">
-                <div id="TopNav">
-                    <div role="ficap-languages"></div>
-                </div>
-                <div class="AlignRight" id="HelpDesk">
-                    <a href="help.html" class="red iframe"><img src="/static/hsia/images/help_me.png" title='Click for Helpdesk Details.'/></a>
-                </div>
-            </div>
-
-        </div>
-        <div id="BodyContainer">
-            <div id="LoyaltyContent">
-                <div class="Left">
-                    <ul id="LeftNav">
-                        <li class="Connect"><a href="#" id="LoadConnect">Connect for the 1st Time</a></li>
-                        <li><img src="/static/hsia/images/SmallLogo.png" /></li>
-                    </ul>
-                </div>
-                <div class="functions Right" id="result">
-                    <div class="LandingPage" id="LandingPage">
-                <h2 class="Title">Welcome to The Hotel</h2>
-                <h3 class="Tag">Enjoy high-speed internet access from wherever you are</h3>
-                <h4 class="Span">To begin, please pick a connection option from the left.</h4>
-                <p><img src="/static/hsia/images/HotelImg.png" /></p>
-            </div>
-
-        <div class="ConnectingColumn" id="ConnectingColumn" style="display: none;" >
-            <h2 class="Title">Choose Your Login Options</h2>
-            <h3 class="Tag">First-time Users</h3>
-            <div class="OptionsColumn">
-                <div role="ficap-content" class="content"></div>
-            </div>
-        </div>
-    </div>
+    <div role="ficap-container" class="content"></div>
 
     <script type="text/javascript">
         $("#LoadConnect").on('click', function(){
@@ -104,6 +63,51 @@
                 return false; //Prevent the browser jump to the link anchor
             });
         });
+    </script>
+
+    <script id="main-template" type="text/x-handlebars-template">
+        <div id="Container">
+            <div id="Header">
+                <div id="Logo">
+                    <h1>
+                        <a href="{{ hotel_url }}">interTouch</a>
+                    </h1>
+                </div>
+
+                <div id="TopContainer">
+                    <div id="TopNav">
+                        <div role="ficap-languages"></div>
+                    </div>
+                    <div class="AlignRight" id="HelpDesk">
+                        <a href="help.html" class="red iframe"><img src="/static/hsia/images/help_me.png" title='Click for Helpdesk Details.'/></a>
+                    </div>
+                </div>
+
+            </div>
+            <div id="BodyContainer">
+                <div id="LoyaltyContent">
+                    <div class="Left">
+                        <ul id="LeftNav">
+                            <li class="Connect"><a href="#" id="LoadConnect">Connect for the 1st Time</a></li>
+                            <li><img src="/static/hsia/images/SmallLogo.png" /></li>
+                        </ul>
+                    </div>
+                    <div class="functions Right" id="result">
+                        <div class="LandingPage" id="LandingPage">
+                    <h2 class="Title">Welcome to The Hotel</h2>
+                    <h3 class="Tag">Enjoy high-speed internet access from wherever you are</h3>
+                    <h4 class="Span">To begin, please pick a connection option from the left.</h4>
+                    <p><img src="/static/hsia/images/HotelImg.png" /></p>
+                </div>
+
+            <div class="ConnectingColumn" id="ConnectingColumn" style="display: none;" >
+                <h2 class="Title">Choose Your Login Options</h2>
+                <h3 class="Tag">First-time Users</h3>
+                <div class="OptionsColumn">
+                    <div role="ficap-content" class="content"></div>
+                </div>
+            </div>
+        </div>
     </script>
     <script id="languages-template" type="text/x-handlebars-template">
         <div id="language" class="dropdown">
