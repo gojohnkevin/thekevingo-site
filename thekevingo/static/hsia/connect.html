@@ -28,14 +28,14 @@
     <div role="ficap-container" class="content"></div>
 
     <script type="text/javascript">
-        $("#LoadConnect").on('click', function(){
+        $(document).on('click', "#LoadConnect", function(){
             $('#ConnectingColumn').show();
             $('#LandingPage').hide();
             $('#AlreadyPurchaseColumn').hide();
             $('#AdditionalDevicesColumn').hide();
         });
 
-        $("#LoadPurchase").on('click', function(){
+        $(document).on('click', "#LoadPurchase", function(){
             $('#AlreadyPurchaseColumn').show();
             $('#LandingPage').hide();
             $('#ConnectingColumn').hide();
